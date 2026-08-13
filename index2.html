@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BuyClose</title>
+
+    <style>
+
+        /* =========================
+           GENERAL PAGE
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #eeeeee;
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* =========================
+           PHONE
+        ========================== */
+
+        .phone {
+            width: 375px;
+            height: 812px;
+
+            background: white;
+
+            border-radius: 35px;
+
+            padding: 35px 40px;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================== */
+
+        .back-button {
+            border: none;
+            background: transparent;
+
+            font-size: 38px;
+            font-weight: 300;
+
+            cursor: pointer;
+
+            color: #17202a;
+
+            margin-bottom: 35px;
+
+            line-height: 1;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .header h1 {
+            font-size: 36px;
+            color: #050505;
+
+            margin-bottom: 28px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 600;
+
+            color: #96979c;
+
+            margin-bottom: 48px;
+        }
+
+
+        /* =========================
+           FORM
+        ========================== */
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            color: #92939a;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           INPUT
+        ========================== */
+
+        .input-box {
+            width: 100%;
+            height: 64px;
+
+            border: 2px solid #d1dee5;
+
+            border-radius: 17px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 18px;
+
+            background: white;
+        }
+
+        .input-box input {
+            width: 100%;
+
+            border: none;
+            outline: none;
+
+            font-size: 17px;
+            font-weight: 600;
+
+            color: #333;
+
+            background: transparent;
+        }
+
+        .input-box input::placeholder {
+            color: #d0dce3;
+        }
+
+
+        /* =========================
+           EYE ICON
+        ========================== */
+
+        .eye {
+            width: 24px;
+            height: 24px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================
+           FORGOT PASSWORD
+        ========================== */
+
+        .forgot {
+            display: block;
+
+            text-align: right;
+
+            color: #f00000;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            text-decoration: none;
+
+            margin-top: -3px;
+            margin-bottom: 38px;
+        }
+
+
+        /* =========================
+           LOGIN BUTTON
+        ========================== */
+
+        .login-button {
+            width: 100%;
+            height: 68px;
+
+            border: none;
+            border-radius: 25px;
+
+            background: #f00000;
+
+            color: white;
+
+            font-size: 22px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            margin-bottom: 35px;
+        }
+
+        .login-button:hover {
+            background: #d90000;
+        }
+
+
+        /* =========================
+           SOCIAL LOGIN
+        ========================== */
+
+        .social-login {
+            text-align: center;
+        }
+
+        .social-title {
+            font-size: 18px;
+            font-weight: 700;
+
+            color: #050505;
+
+            margin-bottom: 24px;
+        }
+
+        .social-buttons {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+        }
+
+        .social-button {
+            width: 50%;
+            height: 58px;
+
+            background: white;
+
+            border: 2px solid #d3dfe5;
+
+            border-radius: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           GOOGLE LOGO
+        ========================== */
+
+        .google-logo {
+            width: 25px;
+            height: 25px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================
+           APPLE LOGO
+        ========================== */
+
+        .apple-logo {
+            width: 24px;
+            height: 27px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================
+           REGISTER
+        ========================== */
+
+        .register {
+            text-align: center;
+
+            margin-top: 55px;
+        }
+
+        .register p {
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #111;
+
+            white-space: nowrap;
+        }
+
+        .register a {
+            color: #f00000;
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PHONE
+    ========================== -->
+
+    <main class="phone">
+
+
+        <!-- =========================
+             BACK BUTTON
+        ========================== -->
+
+        <button class="back-button" aria-label="Go back">
+            ‹
+        </button>
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="header">
+
+            <h1>Welcome Back!</h1>
+
+            <p class="subtitle">
+                Log in to continue
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+             EMAIL
+        ========================== -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Email or Phone Number
+            </label>
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Input Email"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PASSWORD
+        ========================== -->
+
+        <div class="form-group">
+
+            <label for="password">
+                Password
+            </label>
+
+            <div class="input-box">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Input Password"
+                >
+
+                <!-- Eye icon -->
+                <svg
+                    class="eye"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#96979c"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+
+                    <circle cx="12" cy="12" r="3"/>
+
+                    <line x1="3" y1="3" x2="21" y2="21"/>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FORGOT PASSWORD
+        ========================== -->
+
+        <a href="#" class="forgot">
+            Forgot Password
+        </a>
+
+
+        <!-- =========================
+             LOGIN
+        ========================== -->
+
+        <button class="login-button">
+            Login
+        </button>
+
+
+        <!-- =========================
+             SOCIAL LOGIN
+        ========================== -->
+
+        <section class="social-login">
+
+            <p class="social-title">
+                or continue with
+            </p>
+
+
+            <div class="social-buttons">
+
+
+                <!-- =====================
+                     GOOGLE
+                ====================== -->
+
+                <button class="social-button">
+
+                    <svg
+                        class="google-logo"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            fill="#4285F4"
+                            d="M21.35 12.23c0-.79-.07-1.55-.22-2.28H12v4.31h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.42Z"
+                        />
+
+                        <path
+                            fill="#34A853"
+                            d="M12 21.67c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.93-3.31.93-2.55 0-4.71-1.72-5.49-4.03H3.27v2.53A9.74 9.74 0 0 0 12 21.67Z"
+                        />
+
+                        <path
+                            fill="#FBBC05"
+                            d="M6.51 13.76A5.85 5.85 0 0 1 6.2 12c0-.61.11-1.2.31-1.76V7.71H3.27A9.74 9.74 0 0 0 2.25 12c0 1.57.38 3.06 1.02 4.29l3.24-2.53Z"
+                        />
+
+                        <path
+                            fill="#EA4335"
+                            d="M12 6.21c1.43 0 2.72.49 3.74 1.46l2.8-2.8C16.83 3.3 14.63 2.33 12 2.33a9.74 9.74 0 0 0-8.73 5.38l3.24 2.53C7.29 7.93 9.45 6.21 12 6.21Z"
+                        />
+
+                    </svg>
+
+                    <span>Google</span>
+
+                </button>
+
+
+                <!-- =====================
+                     APPLE
+                ====================== -->
+
+                <button class="social-button">
+
+                    <svg
+                        class="apple-logo"
+                        viewBox="0 0 24 28"
+                        fill="black"
+                    >
+
+                        <path d="M19.67 14.82c-.03-3.02 2.47-4.48 2.58-4.55-1.41-2.06-3.6-2.34-4.36-2.37-1.82-.19-3.59 1.09-4.5 1.09-.94 0-2.38-1.07-3.92-1.04-1.98.03-3.83 1.18-4.84 2.96-2.09 3.63-.53 8.96 1.47 11.9 1 1.44 2.17 3.05 3.72 2.99 1.51-.06 2.09-.96 3.91-.96 1.8 0 2.35.96 3.93.92 1.63-.03 2.64-1.45 3.6-2.9 1.14-1.65 1.6-3.25 1.62-3.34-.04-.01-3.18-1.22-3.21-4.7ZM16.72 5.92c.81-1.01 1.36-2.39 1.21-3.78-1.17.05-2.63.81-3.47 1.79-.74.86-1.4 2.29-1.23 3.64 1.32.1 2.66-.67 3.49-1.65Z"/>
+
+                    </svg>
+
+                    <span>Apple</span>
+
+                </button>
+
+
+            </div>
+        </section>
+        <!-- =========================
+             REGISTER
+        ========================== -->
+       <div class="register">
+    <span>Don't have an account?</span>
+    <a href="#">Register</a>
+       </div>
+    </main>
+</body>
+</html>
